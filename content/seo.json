@@ -1,0 +1,23 @@
+{
+  "url": "https://www.tidelpo.teknisee.store",
+  "title": "Tidelpo - Smart Monitoring Electric Pole",
+  "description": "Tidelpo adalah solusi monitoring tiang listrik yang cerdas dan efisien. Tidelpo membantu Anda memantau kondisi tiang listrik secara real-time dan memberikan notifikasi ketika terjadi gangguan.",
+  "generator": "Next.js",
+  "applicationName": "Tidelpo",
+  "authors": [{ "name": "Teknisee", "url": "https://www.teknisee.com/" }],
+  "creator": "teknisee goat",
+  "publisher": "Teknisee",
+  "referrer": "origin-when-cross-origin",
+  "keywords": [
+    "teknisee",
+    "project teknisee",
+
+    "tidelpo teknisee",
+    "teknisee project",
+    "tidelpo",
+    "monitoring tidelpo",
+    "monitoring tiang listrik"
+  ],
+  "logo": "/ogImage.png",
+  "locale": "id_ID"
+}

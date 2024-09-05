@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Device {
+  id        String   @id @default(cuid())
+  deviceCode String   @unique
+  nama        String
+  lat         Float
+  lng         Float
+  sensors     Sensor[]
+}
+
+model Sensor {
+  id          Int     @id @default(autoincrement())
+  deviceCode String
+  statusTiang Status_tiang @default(aman)
+  sensSoil     Float
+  sensPressure     Float
+  sensTilt     Float
+  timeStamp   DateTime @default(now())
+  device      Device  @relation(fields: [deviceCode], references: [deviceCode])
+}
+
+enum Status_tiang{
+  aman
+  waspada
+  bahaya
+}
